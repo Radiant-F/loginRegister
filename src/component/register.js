@@ -7,9 +7,9 @@ import {
   Button,
   TouchableOpacity,
 } from 'react-native';
-import styles from './src/component/styleRegister';
+import styles from './styleRegister';
 
-class App extends Component {
+class Register extends Component {
   render() {
     return (
       <View style={styles.mainView}>
@@ -40,4 +40,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Register;
