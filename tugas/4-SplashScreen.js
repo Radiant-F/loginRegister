@@ -3,6 +3,7 @@ import {View, Image, Text, ActivityIndicator} from 'react-native';
 import Login from './src/component/login';
 import Register from './src/component/register';
 import logo from './src/assets/knife_party_logo_vector_by_ironpudding385_d5tclw1.png';
+import Navigation from '../src/component/Navigation';
 
 class App extends React.Component {
   constructor() {
@@ -11,6 +12,12 @@ class App extends React.Component {
   }
   componentDidMount() {
     console.log('Ini dari mount');
+    setTimeout(() => {
+      this.componentDidUpdate = () => console.log('ini dari update');
+      this.setState({
+        role: false,
+      });
+    }, 3000);
   }
   state = {
     role: true,
@@ -30,16 +37,10 @@ class App extends React.Component {
     );
   };
   render() {
-    setTimeout(() => {
-      this.componentDidUpdate = () => console.log('ini dari update');
-      this.setState({
-        role: false,
-      });
-    }, 3000);
     if (this.state.role) {
       return <View>{this.splash()}</View>;
     } else {
-      return <Login />;
+      return <Navigation />;
       // <Register />;
     }
   }

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import styles from './styleRegister';
 
-class Register extends Component {
+export default class Register extends Component {
   render() {
     return (
       <View style={styles.mainView}>
@@ -32,12 +32,11 @@ class Register extends Component {
             </View>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity onPress={() => alert('Datang lagi lain waktu.')}>
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate('Login')}>
           <Text style={styles.subText}>Sudah punya akun? Masuk sekarang!</Text>
         </TouchableOpacity>
       </View>
     );
   }
 }
-
-export default Register;

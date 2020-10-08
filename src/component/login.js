@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import styles from './styleLogin';
 
-class Login extends Component {
+export default class Login extends Component {
   render() {
     return (
       <View style={styles.mainView}>
@@ -35,12 +35,11 @@ class Login extends Component {
             <Text style={styles.textLogin}>Lanjut dengan Google</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => alert('Datang lagi lain waktu.')}>
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate('Register')}>
           <Text style={styles.subText}>Belum punya akun? Daftar sekarang!</Text>
         </TouchableOpacity>
       </View>
     );
   }
 }
-
-export default Login;
