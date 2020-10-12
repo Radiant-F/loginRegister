@@ -26,7 +26,8 @@ export default class Register extends Component {
             placeholder={'Kata Sandi'}
             secureTextEntry={true}
             style={styles.textInput2}></TextInput>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Home')}>
             <View style={styles.viewLogin}>
               <Text style={styles.textLogin}>Daftar</Text>
             </View>
