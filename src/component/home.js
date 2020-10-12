@@ -32,7 +32,7 @@ export default class Login extends Component {
 
           <TouchableOpacity
             onPress={() =>
-              this.props.navigation.navigate('Contact', {
+              this.props.navigation.navigate('Passing', {
                 email: this.state.email,
               })
             }>
@@ -40,7 +40,7 @@ export default class Login extends Component {
               <Text
                 style={styles.textLogin}
                 onPress={() =>
-                  this.props.navigation.navigate('Contact', {
+                  this.props.navigation.navigate('Passing', {
                     email: this.state.email,
                   })
                 }>

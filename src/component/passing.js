@@ -7,7 +7,7 @@ export class passing extends Component {
     console.log(email);
     return (
       <View>
-        <Text> email anda: {email} </Text>
+        <Text> nama anda adalah: {email} </Text>
       </View>
     );
   }
